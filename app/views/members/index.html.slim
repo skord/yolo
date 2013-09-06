@@ -1,0 +1,13 @@
+h1 Members
+table
+  thead
+    tr
+      th Name
+      th Phone
+  tbody
+    - @members.each do |member|
+      tr
+        td = link_to member.name, edit_member_path(member)
+        td = member.phone
+= link_to "Add Member", new_member_path
+
